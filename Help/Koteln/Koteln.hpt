@@ -1,0 +1,51 @@
+RoboHelp Topic Export file
+23|Message_Types|Типы аварийных сообщений
+23|Crash_situations|Обработка аварийных ситуаций
+23|Group_index|Индексы групп
+23|Prewiev_Window|Окно просмотр печати
+23|SwitchOff_signal_window|Окно отключения сигналов
+23|SetGraph_window|Окно  настройки графиков и печати
+23|Set_port_window|Окно настройки портов и индексов
+23|Channel_Setup_Window|Окно настройки каналов
+23|DB_Setup_Window|Окно настройки параметров баз данных
+23|Grapher_Popu_menu|Всплывающее меню самописца
+23|Main_menu|Главное меню программы
+23|Start_after_setup|Настройка и запуск программы после установки Windows
+23|Standart_Start|Стандартный запуск программы
+23|Abilities|Возможности программы
+23|Welcome|Информация о программе
+23|Pixel|Пиксель
+23|Psevdonim|Псевдоним
+23|Database_Engine|Database Engine
+23|Database_Desktop|Database Desktop
+23|Before_Quit_operations|Операции осуществляемые при выходе
+23|Reserve_DataBase|Резервная база данных
+23|Alarm_Database|Аварийная база данных
+23|Main_Database|Основная база данных
+23|Channel_database|База каналов
+23|DB_Quick_Tour|Краткий обзор базы данных
+23|Main_directory_files|Файлы содержащиеся в основном  каталоге
+23|ReservDB_Directory|Каталог ReservDB
+23|Images_Directory|Каталог Images
+23|Wav_Directory|КаталогWav
+23|Grather|Самописец
+23|Sound|Звук
+23|Scale_signal|Масштабирование выходного сигнала
+23|TRM12_manufacter_manual|Инструкция завода изготовителя на приборы серии ТРМ - 12
+23|TRM1_Manufacter_Manual|Инструкция завода изготовителя на приборы серии ТРМ - 1
+23|AS_Manufacter_Manual|Инструкция завода изготовителя на адаптер сети
+23|Signal_control_devices|Приборы контроля сигналов ТРМ
+23|Network_Adapter|Адаптер сети (АС)
+23|Hardvare|Перечень оборудования
+23|External_connection_plate|Плата связи с внешними устройствами
+23|DB|БД
+23|Print_DataBase|Печать базы данных
+23|Print_Setup|Настройка печати
+23|Graph_List|Список графиков
+23|Select_Param_Window|Окно выбора параметров
+23|Print_Graph|Настройка и печать графика
+23|State_string|Строка состояния
+23|DPI|DPI
+23|Virtual_Port|Виртуальный порт
+23|HTML_PDF_DIR|Каталог HTML_PDF
+23|Smoothing_of_signal|Сглаживание выходного сигнала

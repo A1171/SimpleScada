@@ -1,0 +1,288 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+#include "SetBD.h"
+#include "DataUnit.h"
+#include "MainUnut.h"
+#include "Constant.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TSetParamForm *SetParamForm;
+//---------------------------------------------------------------------------
+__fastcall TSetParamForm::TSetParamForm(TComponent* Owner)
+        : TForm(Owner)
+{
+#ifdef Debug
+AddSButton->Visible=true;
+AddSButton->Left+=100;
+SpeedButton1->Visible=true;
+DBNavigator1->VisibleButtons<<nbInsert;
+DBNavigator1->VisibleButtons<<nbDelete;
+DBNavigator1->VisibleButtons<<nbPost;
+DBNavigator1->VisibleButtons<<nbCancel;
+DBNavigator2->VisibleButtons<<nbDelete;
+DBNavigator1->Width+=100;
+#endif
+DataModule1->KanalsTable->Refresh();
+DataModule1->CalcSignTable->Refresh();
+}
+//---------------------------------------------------------------------------
+void __fastcall TSetParamForm::BitBtn1Click(TObject *Sender)
+{
+const unsigned short  TableCount=2;
+TTable* Tables[TableCount]={DataModule1->KanalsTable,DataModule1->CalcSignTable};
+for(unsigned short i=0;i<TableCount;i++)
+ {
+ TTable* Pointer=Tables[i];
+ Pointer->Active=true;
+ Pointer->Filtered=false;
+ Pointer->First();
+ int Counter=0;
+ while((Pointer->FindNext())&&(!Pointer->Eof))
+  if(Pointer->FieldValues["Number"]<=Counter)
+  {
+  Pointer->Edit();
+  Pointer->FieldValues["Number"]=Counter;
+  //DataModule1->KanalsTable->FindNext();
+  Counter++;
+  }
+ if(Pointer->State==dsEdit)
+   Pointer->Post();
+ Pointer->ApplyUpdates();
+ Pointer->Refresh();
+ }
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TSetParamForm::DBNavigator1Click(TObject *Sender,
+      TNavigateBtn Button)
+{
+DataModule1->CalcSignTable->Refresh();
+DBEdit30->Enabled=SmoothDBCheckBox1->Checked;
+//if(Button==
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TSetParamForm::AddSButtonClick(TObject *Sender)
+{
+int fine;
+DataModule1->KanalsTable->Last();
+fine=DataModule1->KanalsTable->FieldValues["Number"];
+DataModule1->KanalsTable->Append();
+DataModule1->KanalsTable->FieldValues["Number"]=fine+1;
+DataModule1->KanalsTable->FieldValues["OffSet"]=int(0);
+DataModule1->KanalsTable->FieldValues["Scale"]=float(1);
+DBEdit18->Enabled=DBCheckBox1->Checked;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TSetParamForm::DefaultButClick(TObject *Sender)
+{
+/*DataModule1->KanalsTable->Active=false;
+DataModule1->KanalsTable->DatabaseName=MainForm->ProgramDir;
+DataModule1->KanalsTable->TableName=MainForm->ProgramDir+"\\adams3.db";
+DataModule1->KanalsTable->TableType=ttParadox;
+DataModule1->KanalsTable->EmptyTable();
+DataModule1->KanalsTable->Active=true;*/
+int Result;
+Result=Application->MessageBox("Вы действительно хотите восстановить стандартные настройки для всех сигналов",
+"Сообщение",MB_OKCANCEL|MB_ICONQUESTION|MB_DEFBUTTON1|MB_APPLMODAL);
+if(Result!=IDOK)return;
+const unsigned short  TableCount=2;//2;
+TTable* Tables[TableCount]={DataModule1->KanalsTable,DataModule1->CalcSignTable};
+for(unsigned short i=0;i<TableCount;i++)
+ {
+ TTable* Pointer=Tables[i];
+ Pointer->ApplyUpdates();
+ Pointer->DisableControls();
+ Pointer->First();
+ if(Pointer->RecordCount)
+ {
+ if(Pointer->FindNext())
+  {
+  Pointer->First();
+  do
+   {
+   Pointer->Delete();
+   }
+  while(!Pointer->Eof);
+  if(Pointer->RecordCount) Pointer->Delete();
+  }
+ else
+  {
+  Pointer->First();
+  Pointer->Delete();
+  }
+ }
+ Pointer->First();
+ Pointer->ApplyUpdates();
+ DataModule1->WhoreTable->Active=false;
+ DataModule1->WhoreTable->DatabaseName=Pointer->DatabaseName;//MainForm->ProgramDir;
+ DataModule1->WhoreTable->TableName=MainForm->ProgramDir+"\\ReservDb\\"+ExtractFileName(Pointer->TableName);
+ DataModule1->WhoreTable->Active=true;
+ DataModule1->WhoreTable->FindFirst();
+ if((DataModule1->WhoreTable->RecordCount)&&(!DataModule1->WhoreTable->Eof))
+  {
+  bool a;
+  do
+   {                                            //DataModule1->WhoreTable->FieldCount
+   Pointer->Append();
+   for(int j=0;j<DataModule1->WhoreTable->FieldCount;j++)
+    {
+    Pointer->Fields->Fields[j]->Value=DataModule1->WhoreTable->Fields->Fields[j]->Value;
+    }
+   Pointer->Post();
+   a=DataModule1->WhoreTable->FindNext();
+   }
+  while((a)&&(!DataModule1->WhoreTable->Eof));
+  }
+ Pointer->EnableControls();
+ Pointer->Active=true;
+ Pointer->ApplyUpdates();
+ Pointer->Refresh();
+ }
+/*do
+ {
+ DataModule1->KanalsTable->Append();
+ DataModule1->KanalsTable->FieldValues["Number"]=
+ DataModule1->ReservKanTable->FieldValues["Number"];
+ DataModule1->KanalsTable->FieldValues["Adam"]=
+ DataModule1->ReservKanTable->FieldValues["Adam"];
+ DataModule1->KanalsTable->FieldValues["Kanal"]=
+ DataModule1->ReservKanTable->FieldValues["Kanal"];
+ DataModule1->KanalsTable->FieldValues["Parametr"]=
+ DataModule1->ReservKanTable->FieldValues["Parametr"];
+ DataModule1->KanalsTable->FieldValues["Min"]=
+ DataModule1->ReservKanTable->FieldValues["Min"];
+ DataModule1->KanalsTable->FieldValues["Max"]=
+ DataModule1->ReservKanTable->FieldValues["Max"];
+ DataModule1->KanalsTable->FieldValues["MinAlarm"]=
+ DataModule1->ReservKanTable->FieldValues["MinAlarm"];
+ DataModule1->KanalsTable->FieldValues["MaxAlarm"]=
+ DataModule1->ReservKanTable->FieldValues["MaxAlarm"];
+ DataModule1->KanalsTable->FieldValues["SoundMin"]=
+ DataModule1->ReservKanTable->FieldValues["SoundMin"];
+ DataModule1->KanalsTable->FieldValues["SoundMax"]=
+ DataModule1->ReservKanTable->FieldValues["SoundMax"];
+ DataModule1->KanalsTable->FieldValues["SoundTop"]=
+ DataModule1->ReservKanTable->FieldValues["SoundTop"];
+ DataModule1->KanalsTable->FieldValues["SoundBottom"]=
+ DataModule1->ReservKanTable->FieldValues["SoundBottom"];
+ DataModule1->KanalsTable->FieldValues["OffSet"]=
+ DataModule1->ReservKanTable->FieldValues["OffSet"];
+ DataModule1->KanalsTable->FieldValues["Scale"]=
+ DataModule1->ReservKanTable->FieldValues["Scale"];
+ DataModule1->KanalsTable->FieldValues["GroupInd"]=
+ DataModule1->ReservKanTable->FieldValues["GroupInd"];
+ DataModule1->KanalsTable->FieldValues["EdIzm"]=
+ DataModule1->ReservKanTable->FieldValues["EdIzm"];
+ DataModule1->KanalsTable->FieldValues["SaveData"]=
+ DataModule1->ReservKanTable->FieldValues["SaveData"];
+ DataModule1->KanalsTable->Post();
+ }
+while(DataModule1->ReservKanTable->FindNext());
+DataModule1->KanalsTable->EnableControls();
+DataModule1->KanalsTable->Active=true;*/
+//DataModule1->KanalsTable->ApplyUpdates();
+//DataModule1->KanalsTable->Active=true;
+//DataModule1->KanalsTable->Active=true;
+/*DataModule1->KanalsTable->Active=false;
+AnsiString SourceName;
+AnsiString TargetName;
+char SourceFile[250];
+char TargetFile[250];
+bool a;
+
+SourceName=MainForm->ProgramDir+"\\ReservBD\\Adams3.DB";
+TargetName=MainForm->ProgramDir+"\\Adams3.DB";
+for(int i=1;i<250;i++)
+ if(i<SourceName.Length()+1)
+ SourceFile[i-1]=SourceName[i];
+ else
+ SourceFile[i-1]=0;
+for(int i=1;i<250;i++)
+ if(i<TargetName.Length()+1)
+ TargetFile[i-1]=TargetName[i];
+ else
+ TargetFile[i-1]=0;
+ a=CopyFile(&SourceFile[0],&TargetFile[0],false);
+
+SourceName=MainForm->ProgramDir+"\\ReservBD\\Adams3.PX";
+TargetName=MainForm->ProgramDir+"\\Adams3.PX";
+for(int i=1;i<250;i++)
+ if(i<SourceName.Length()+1)
+ SourceFile[i-1]=SourceName[i];
+ else
+ SourceFile[i-1]=0;
+for(int i=1;i<250;i++)
+ if(i<TargetName.Length()+1)
+ TargetFile[i-1]=TargetName[i];
+ else
+ TargetFile[i-1]=0;
+ a=CopyFile(&SourceFile[0],&TargetFile[0],false);
+int b=GetLastError();
+
+ SourceName=MainForm->ProgramDir+"\\ReservBD\\Adams3.VAL";
+TargetName=MainForm->ProgramDir+"\\Adams3.VAL";
+for(int i=1;i<250;i++)
+ if(i<SourceName.Length()+1)
+ SourceFile[i-1]=SourceName[i];
+ else
+ SourceFile[i-1]=0;
+for(int i=1;i<250;i++)
+ if(i<TargetName.Length()+1)
+ TargetFile[i-1]=TargetName[i];
+ else
+ TargetFile[i-1]=0;
+a=CopyFile(&SourceFile[0],&TargetFile[0],false);
+DataModule1->KanalsTable->Active=true;
+DataModule1->KanalsTable->Refresh();*/
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TSetParamForm::BitBtn2Click(TObject *Sender)
+{
+DataModule1->KanalsTable->CancelUpdates();
+DataModule1->CalcSignTable->CancelUpdates();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TSetParamForm::FormActivate(TObject *Sender)
+{
+DBEdit18->Enabled=DBCheckBox1->Checked;
+DBEdit30->Enabled=SmoothDBCheckBox1->Checked;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TSetParamForm::DBCheckBox1Click(TObject *Sender)
+{
+DBEdit18->Enabled=DBCheckBox1->Checked;
+}
+//---------------------------------------------------------------------------
+void __fastcall TSetParamForm::SpeedButton1Click(TObject *Sender)
+{
+int fine;
+DataModule1->CalcSignTable->Last();
+fine=DataModule1->CalcSignTable->FieldValues["Number"];
+DataModule1->CalcSignTable->Append();
+DataModule1->CalcSignTable->FieldValues["Number"]=fine+1;
+DataModule1->CalcSignTable->FieldValues["OffSet"]=int(0);
+DataModule1->CalcSignTable->FieldValues["Scale"]=float(1);
+DBEdit30->Enabled=SmoothDBCheckBox1->Checked;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TSetParamForm::SmoothDBCheckBox1Click(TObject *Sender)
+{
+DBEdit30->Enabled=SmoothDBCheckBox1->Checked;
+}
+//---------------------------------------------------------------------------
+
+
+
+

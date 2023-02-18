@@ -1,0 +1,107 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+#include "DataUnit.h"
+#include "MainUnut.h"
+#include "Function.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TDataModule1 *DataModule1;
+//---------------------------------------------------------------------------
+__fastcall TDataModule1::TDataModule1(TComponent* Owner)
+        : TDataModule(Owner)
+{
+for(int i=0;i<maxsignal;i++)Signal[i]=0;
+InitialDataBases();
+}
+//---------------------------------------------------------------------------
+void TDataModule1::InitialDataBases()
+{
+KanalsTable->Active=false;
+StatistTable->Active=false;
+CalcSignTable->Active=false;
+AlarmTable->Active=false;
+WhoreTable->Active=false;
+CaptionsTable->Active=false;
+KanalsTable->DatabaseName=MainForm->ProgramDir;
+KanalsTable->TableName=MainForm->ProgramDir+"\\adams3.db";
+StatistTable->DatabaseName=MainForm->ProgramDir;
+StatistTable->TableName=MainForm->ProgramDir+"\\Data1.db";
+CalcSignTable->DatabaseName=MainForm->ProgramDir;
+CalcSignTable->TableName=MainForm->ProgramDir+"\\CalcSign.db";
+AlarmTable->DatabaseName=MainForm->ProgramDir;
+AlarmTable->TableName=MainForm->ProgramDir+"\\Alarm.db";
+CaptionsTable->DatabaseName=MainForm->ProgramDir;
+CaptionsTable->TableName=MainForm->ProgramDir+"\\Captions.db";
+WhoreTable->DatabaseName=MainForm->ProgramDir;
+CaptionsTable->Active=true;
+KanalsTable->Active=true;
+StatistTable->Active=true;
+CalcSignTable->Active=true;
+AlarmTable->Active=true;
+KanName="\\adams3.db";
+StatistTable->Active=true;
+ReservKanTable->DatabaseName=MainForm->ProgramDir+"\\ReservDB";
+ReservKanTable->TableName="Adams3.DB";
+ReservKanTable->Active=true;
+/*for(int i=0;i<maxsignal;i++)
+ {
+ Signal[i]=0;
+ }*/
+FillMemory(ExternalDevices,sizeof(ExternalDevices),0xFF);
+}
+//---------------------------------------------------------------------------
+bool TDataModule1::FindRecord1(int Adam,int Channel)
+{
+int Ad,Kan;
+KanalsTable->Active=true;
+KanalsTable->First();
+//KanalsTable->Prior();
+if(!DataModule1->KanalsTable->Eof)
+do
+ {
+ Ad=KanalsTable->FieldValues["Adam"];
+ Kan=KanalsTable->FieldValues["Kanal"];
+ if((Ad==Adam)&&(Kan==Channel)) return true;
+ }
+while(DataModule1->KanalsTable->FindNext());
+if((Ad==Adam)&&(Kan==Channel)) return true;
+return false;
+}
+
+
+
+void __fastcall TDataModule1::DataModule1Destroy(TObject *Sender)
+{
+for(int i=0;i<maxsignal;i++)if(Signal[i]){delete Signal[i];Signal[i]=0;}
+//CopyToReserve();
+//RefreshStat();
+//RefreshAlarm();
+}
+//---------------------------------------------------------------------------
+float TDataModule1::GetIntProc(unsigned short Numb,float Par1,float Par2)
+{
+switch(Numb)
+ {
+ case 1:return IntProc1(Par1,Par2);
+ case 2:return IntProc2(Par1,Par2);
+ }
+}
+//---------------------------------------------------------------------------
+float TDataModule1::IntProc1(float Par1,float Par2)
+{
+if(Par1>10)return 0;
+else if((Par1<=10)&&(Par1>=-15))return 70;
+else if((Par1<-15)&&(Par1>=-40))return (70-(15+Par1)*25/25);
+else return 95;
+}
+float TDataModule1::IntProc2(float Par1,float Par2)
+{
+return 0;
+}
+
+
+
+

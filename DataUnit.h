@@ -1,0 +1,101 @@
+//---------------------------------------------------------------------------
+#ifndef DataUnitH
+#define DataUnitH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <Db.hpp>
+#include <DBTables.hpp>
+#include "Function.h"
+#include "Constant.h"
+#include <DB.hpp>
+//---------------------------------------------------------------------------
+class TDataModule1 : public TDataModule
+{
+__published:	// IDE-managed Components
+        TTable *KanalsTable;
+        TDataSource *DataSource1;
+        TTable *StatistTable;
+        TDataSource *DataSource2;
+        TDateField *StatistTableDate;
+        TFloatField *StatistTableValue;
+        TStringField *StatistTableParametr;
+        TStringField *StatistTableEdIzm;
+        TTable *AlarmTable;
+        TDataSource *AlarmSource;
+        TTable *ReservStatTable;
+        TTable *ReservKanTable;
+        TDateField *ReservStatTableDate;
+        TFloatField *ReservStatTableValue;
+        TStringField *ReservStatTableParametr;
+        TStringField *ReservStatTableEDIzm;
+        TIntegerField *ReservKanTableNumber;
+        TIntegerField *ReservKanTableAdam;
+        TIntegerField *ReservKanTableKanal;
+        TStringField *ReservKanTableParametr;
+        TFloatField *ReservKanTableMin;
+        TFloatField *ReservKanTableMax;
+        TFloatField *ReservKanTableMinAlarm;
+        TFloatField *ReservKanTableMaxAlarm;
+        TStringField *ReservKanTableSoundMin;
+        TStringField *ReservKanTableSoundMax;
+        TStringField *ReservKanTableSoundTop;
+        TStringField *ReservKanTableSoundBottom;
+        TFloatField *ReservKanTableOffSet;
+        TFloatField *ReservKanTableScale;
+        TIntegerField *ReservKanTableGroupInd;
+        TStringField *ReservKanTableEdIzm;
+        TBooleanField *ReservKanTableSaveData;
+        TBooleanField *ReservKanTableSmoothing;
+        TIntegerField *ReservKanTableArraySize;
+        TDateField *AlarmTableDate;
+        TFloatField *AlarmTableValue;
+        TStringField *AlarmTableParametr;
+        TStringField *AlarmTableEdIzm;
+        TIntegerField *StatistTableHours;
+        TIntegerField *StatistTableMinuts;
+        TIntegerField *StatistTableSeconds;
+        TIntegerField *StatistTableNumb;
+        TIntegerField *ReservStatTableHours;
+        TIntegerField *ReservStatTableMinuts;
+        TIntegerField *ReservStatTableSeconds;
+        TIntegerField *AlarmTableHours;
+        TIntegerField *AlarmTableMinuts;
+        TIntegerField *AlarmTableSeconds;
+        TIntegerField *AlarmTableNumb;
+        TIntegerField *ReservStatTableNumb;
+        TTable *CalcSignTable;
+        TTable *WhoreTable;
+        TDataSource *CalcSignSource;
+        TTable *CaptionsTable;
+        TDataSource *CaptionsSource;
+        TSmallintField *CaptionsTableValue;
+        TStringField *CaptionsTableSignalField;
+        TStringField *CaptionsTableSignalType;
+        TStringField *CaptionsTableActionType;
+        void __fastcall DataModule1Destroy(TObject *Sender);
+private:	// User declarations
+float IntProc1(float,float);
+float IntProc2(float,float);float Proc2Var1;double Proc2Var2;bool AlreadyCalled;
+float IntProc3(float,float);
+float IntProc4(float,float);
+float IntProc5(float,float);
+public:		// User declarations
+TDateTime CurDateTime;
+void InitialDataBases();
+bool FindRecord1(int,int);
+AnsiString KanName;
+TDataConteiner* Signal[maxsignal];
+//number of external signal resived from port=0-maxport,device=0-maxadam,channel=0-maxchannel
+//if thisn is a 232 port second parametr=-1(or maxshort)
+unsigned short ExternalDevices[maxport][maxadam][maxchannel];
+bool SingleDevice[maxport];
+float GetIntProc(unsigned short,float,float);
+        __fastcall TDataModule1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TDataModule1 *DataModule1;
+//---------------------------------------------------------------------------
+#endif

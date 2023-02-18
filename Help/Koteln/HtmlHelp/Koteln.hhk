@@ -1,0 +1,198 @@
+<html>
+<!-- Sitemap 1.0 -->
+<object type="text/site properties">
+  <param name="SiteType" value="index">
+</object>
+<ul>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Database Desctop">
+            <param name="Name" value="Database Desctop">
+            <param name="Local" value="Koteln\Database_Desctop.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Database Engine">
+            <param name="Name" value="Database Engine">
+            <param name="Local" value="Koteln\Database_Engine.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="DPI">
+            <param name="Name" value="DPI">
+            <param name="Local" value="Koteln\DPI.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Welcome">
+            <param name="Name" value="Информация о программе">
+            <param name="Local" value="Koteln\Welcome.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Аварийная база данных">
+            <param name="Name" value="Аварийная база данных">
+            <param name="Local" value="Koteln\Alarm_Database.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="БД">
+            <param name="Name" value="БД">
+            <param name="Local" value="Koteln\DB.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="База каналов">
+            <param name="Name" value="База каналов">
+            <param name="Local" value="Koteln\Channel_database.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Возможности программы">
+            <param name="Name" value="Возможности программы">
+            <param name="Local" value="Koteln\Abilities.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Всплывающее меню самописца">
+            <param name="Name" value="Всплывающее меню самописца">
+            <param name="Local" value="Koteln\Grapher_Popu_menu.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Главное меню программы">
+            <param name="Name" value="Главное меню программы">
+            <param name="Local" value="Koteln\Main_menu.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Дополнительные возможности программы">
+            <param name="Name" value="Звук">
+            <param name="Local" value="Koteln\Sound.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Индексы групп">
+            <param name="Name" value="Индексы групп">
+            <param name="Local" value="Koteln\Group_index.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Каталог Images">
+            <param name="Name" value="Каталог Images">
+            <param name="Local" value="Koteln\Images_Directory.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Каталог ReservDB">
+            <param name="Name" value="Каталог ReservDB">
+            <param name="Local" value="Koteln\ReservDB_Directory.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="КаталогWav">
+            <param name="Name" value="КаталогWav">
+            <param name="Local" value="Koteln\Wav_Directory.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Настройка и запуск программы после установки Windows">
+            <param name="Name" value="Настройка и запуск программы после установки Windows">
+            <param name="Local" value="Koteln\Start_after_setup.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Настройка и печать графика">
+            <param name="Name" value="Настройка и печать графика">
+            <param name="Local" value="Koteln\Print_Graph.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Настройка печати">
+            <param name="Name" value="Настройка печати">
+            <param name="Local" value="Koteln\Print_Setup.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Обработка аварийных ситуаций">
+            <param name="Name" value="Обработка аварийных ситуаций">
+            <param name="Local" value="Koteln\Crash_situations.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Окно  настройки графиков и печати">
+            <param name="Name" value="Окно  настройки графиков и печати">
+            <param name="Local" value="Koteln\SetGraph_window.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Окно выбора параметров">
+            <param name="Name" value="Окно выбора параметров">
+            <param name="Local" value="Koteln\Select_Param_Window.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Окно настройки каналов">
+            <param name="Name" value="Окно настройки каналов">
+            <param name="Local" value="Koteln\Channel_Setup_Window.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Окно настройки параметров баз данных">
+            <param name="Name" value="Окно настройки параметров баз данных">
+            <param name="Local" value="Koteln\DB_Setup_Window.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Окно настройки портов и индексов">
+            <param name="Name" value="Окно настройки портов и индексов">
+            <param name="Local" value="Koteln\Set_port_window.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Окно отключения сигналов">
+            <param name="Name" value="Окно отключения сигналов">
+            <param name="Local" value="Koteln\SwitchOff_signal_window.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Окно просмотр печати">
+            <param name="Name" value="Окно просмотр печати">
+            <param name="Local" value="Koteln\Prewiev_Window.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Операции осуществляемые при выходе">
+            <param name="Name" value="Операции осуществляемые при выходе">
+            <param name="Local" value="Koteln\Before_Quit_operations.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Основная база данных">
+            <param name="Name" value="Основная база данных">
+            <param name="Local" value="Koteln\Main_Database.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Печать базы данных">
+            <param name="Name" value="Печать базы данных">
+            <param name="Local" value="Koteln\Print_DataBase.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Пиксель">
+            <param name="Name" value="Пиксель">
+            <param name="Local" value="Koteln\Pixel.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Псевдоним">
+            <param name="Name" value="Псевдоним">
+            <param name="Local" value="Koteln\Psevdonim.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Резервная база данных">
+            <param name="Name" value="Резервная база данных">
+            <param name="Local" value="Koteln\Reserve_DataBase.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Самописец">
+            <param name="Name" value="Самописец">
+            <param name="Local" value="Koteln\Grather.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Список графиков">
+            <param name="Name" value="Список графиков">
+            <param name="Local" value="Koteln\Graph_List.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Стандартный запуск программы">
+            <param name="Name" value="Стандартный запуск программы">
+            <param name="Local" value="Koteln\Standart_Start.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Строка состояния">
+            <param name="Name" value="Строка состояния">
+            <param name="Local" value="Koteln\State_string.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Типы сообщений">
+            <param name="Name" value="Типы сообщений">
+            <param name="Local" value="Koteln\Message_Types.htm">
+  </object>
+  <li><object type="text/sitemap">
+        <param name="Name" value="Файлы содержащиеся в основном  каталоге">
+            <param name="Name" value="Файлы содержащиеся в основном  каталоге">
+            <param name="Local" value="Koteln\Main_directory_files.htm">
+  </object>
+</ul>
+</html>

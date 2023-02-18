@@ -1,0 +1,41 @@
+:Base Koteln.hlp
+1 О программе
+2 Информация о программе=Welcome
+2 Возможности программы=Abilities
+1 Запуск программы
+2 Стандартный запуск программы=Standart_Start
+2 Настройка и запуск программы после установки Windows=Start_after_setup
+1 Меню программы
+2 Главное меню программы=Main_menu
+2 Всплывающее меню самописца=Grapher_Popu_menu
+1 Настройка программы
+2 Окно настройки параметров баз данных=DB_Setup_Window
+2 Окно настройки каналов=Channel_Setup_Window
+2 Масштабирование выходного сигнала=Scale_signal>Main
+2 Сглаживание выходного сигнала=Smoothing_of_signal>Main
+2 Окно настройки портов и индексов=Set_port_window
+2 Индексы групп=Group_index
+2 Окно  настройки графиков и печати=SetGraph_window
+2 Печать графика=Print_Graph>Main
+2 Окно отключения сигналов=SwitchOff_signal_window
+2 Обработка аварийных ситуаций=Crash_situations
+1 Дополнительные возможности программы
+2 Звук=Sound
+2 Самописец=Grather
+1 Файловая структура программы
+2 Файлы содержащиеся в основном  каталоге=Main_directory_files
+2 КаталогWav=Wav_Directory
+2 Каталог Images=Images_Directory
+2 Каталог ReservDB=ReservDB_Directory
+2 Каталог HTML_PDF=HTML_PDF_DIR
+1 Базы данных
+2 Краткий обзор базы данных=DB_Quick_Tour>Main
+2 База каналов=Channel_database
+2 Основная база данных=Main_Database
+2 Аварийная база данных=Alarm_Database
+2 Резервная база данных=Reserve_DataBase
+1 Оборудование примененное для сбора информации
+2 Перечень оборудования=Hardvare
+2 Плата связи с внешними устройствами=External_connection_plate
+2 Адаптер сети (АС)=Network_Adapter
+2 Приборы контроля сигналов ТРМ=Signal_control_devices

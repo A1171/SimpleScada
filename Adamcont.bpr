@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Adamcont.exe"/>
+    <OBJFILES value="Adamcont.obj MainUnut.obj Chaild.obj SetBD.obj DataUnit.obj Graph.obj 
+      SetStat.obj Connect.obj SetOutPa.obj SetGraph.obj Grapher.obj Function.obj 
+      AlarmLis.obj ReportFo.obj SelectGr.obj SetAdres.obj ReThread.obj 
+      SelFrame.obj IOThread.obj Constant.obj SendThre.obj InteForm.obj"/>
+    <RESFILES value="Adamcont.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) MainUnut.dfm Chaild.dfm SetBD.dfm DataUnit.dfm Graph.dfm 
+      SetStat.dfm Connect.dfm SetOutPa.dfm SetGraph.dfm Grapher.dfm AlarmLis.dfm 
+      ReportFo.dfm SelectGr.dfm SetAdres.dfm SelFrame.dfm IOThread.dfm 
+      InteForm.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib vclx.lib dbrtl.lib vcldb.lib bdertl.lib bcbsmp.lib 
+      qrpt.lib vcldbx.lib tee.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi vcljpg.bpi bcbsmp.bpi qrpt.bpi dbrtl.bpi 
+      vcldb.bpi bdertl.bpi ibsmp.bpi vcldbx.bpi teeui.bpi teedb.bpi tee.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="Adamcont.cpp"/>
+    <INCLUDEPATH value="&quot;c:\Program Files1\Borland\CBuilder4\Projects&quot;;&quot;C:\Program Files1\Borland\CBuilder4\Bin\&quot;;&quot;..\Program Files\Borland\CBuilder4\Bin&quot;;Images;..;&quot;..\Program Files\Borland\CBuilder4\Projects&quot;;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="&quot;c:\Program Files1\Borland\CBuilder4\Projects&quot;;&quot;C:\Program Files1\Borland\CBuilder4\Bin\&quot;;&quot;..\Program Files\Borland\CBuilder4\Bin&quot;;Images;..;&quot;..\Program Files\Borland\CBuilder4\Projects&quot;;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par -w-8027 -w-8026"/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-src_suffix cpp -I&quot;c:\Program Files1\Borland\CBuilder4\Projects&quot; 
+      -I&quot;C:\Program Files1\Borland\CBuilder4\Bin\.&quot; 
+      -I&quot;..\Program Files\Borland\CBuilder4\Bin&quot; -IImages -I.. 
+      -I&quot;..\Program Files\Borland\CBuilder4\Projects&quot; -I$(BCB)\include 
+      -I$(BCB)\include\vcl -boa"/>
+    <CFLAG1 value="-Od -H=c:\PROGRA~2\borland\CBUILD~1\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 
+      -b- -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Adamcont.cpp" FORMNAME="" UNITNAME="Adamcont" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Adamcont.res" FORMNAME="" UNITNAME="Adamcont" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MainUnut.cpp" FORMNAME="MainForm" UNITNAME="MainUnut" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Chaild.cpp" FORMNAME="ChildForm" UNITNAME="Chaild" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SetBD.cpp" FORMNAME="SetParamForm" UNITNAME="SetBD" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DataUnit.cpp" FORMNAME="DataModule1" UNITNAME="DataUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Graph.cpp" FORMNAME="GraphForm" UNITNAME="Graph" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SetStat.cpp" FORMNAME="SetBDForm" UNITNAME="SetStat" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Connect.cpp" FORMNAME="FormOfConnect" UNITNAME="Connect" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SetOutPa.cpp" FORMNAME="SetOutParamForm" UNITNAME="SetOutPa" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SetGraph.cpp" FORMNAME="SetPrnFo" UNITNAME="SetGraph" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Grapher.cpp" FORMNAME="GrapherForm" UNITNAME="Grapher" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Function.cpp" FORMNAME="" UNITNAME="Function" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="AlarmLis.cpp" FORMNAME="AlarmListForm" UNITNAME="AlarmLis" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ReportFo.cpp" FORMNAME="RepForm" UNITNAME="ReportFo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SelectGr.cpp" FORMNAME="SelGraphForm" UNITNAME="SelectGr" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SetAdres.cpp" FORMNAME="AdrForm" UNITNAME="SetAdres" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ReThread.cpp" FORMNAME="" UNITNAME="ReThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SelFrame.cpp" FORMNAME="SelFrameForm" UNITNAME="SelFrame" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="IOThread.cpp" FORMNAME="AdConnThread" UNITNAME="IOThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Constant.cpp" FORMNAME="" UNITNAME="Constant" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SendThre.cpp" FORMNAME="" UNITNAME="SendThre" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="InteForm.cpp" FORMNAME="IntegrForm" UNITNAME="InteForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=C:\Program Files1\Borland\CBuilder4\Bin\;..\Program Files\Borland\CBuilder4\Bin;Images;..;..\Program Files\Borland\CBuilder4\Projects;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=1
+Item0=C:\Program Files1\Borland\CBuilder4\Bin\;..\Program Files\Borland\CBuilder4\Bin;Images;..;..\Program Files\Borland\CBuilder4\Projects;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+  </IDEOPTIONS>
+</PROJECT>

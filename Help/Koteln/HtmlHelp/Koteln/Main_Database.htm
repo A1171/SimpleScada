@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<!-- $MVD$:fontset("Courier New","Courier New") -->
+ <LINK rel="StyleSheet" href="..\Koteln.css">
+ <TITLE>Основная база данных</TITLE>
+ <META NAME="generator" CONTENT="RoboHELP by Blue Sky Software www.blue-sky.com Classic Edition">
+
+ <SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="..\bsscdhtm.js">
+ </SCRIPT>
+</HEAD>
+<BODY onLoad="BSSCOnLoad();" onClick="BSSCOnClick();" onUnLoad="BSSCOnUnload();" background="..\image\p0.gif" BGPROPERTIES="FIXED">
+<H1>Основная база данных</H1>
+<P style="text-indent:14.20pt;">В основной базе данных хранятся значения всех параметров за последние два месяца. При каждом выходе из программы удаляются все записи с датой меньшей чем текущая дата минус 60 дней. Данная база данных записывается автоматически с интервалом установленным в окне установки параметров баз данных (см. <font  color='green'>Окно настройки параметров баз данных</font>). Данный интервал можно изменять, но отключить запись базы данных невозможно.</P>
+<P style="text-indent:14.20pt;">В 14<sup>00</sup> осуществляется копирование данных за последние два дня из основной базы данных в резервную. Просмотр основной и аварийной базы данных и удаление устаревших записей. Время затрачиваемое на просмотр основной и аварийной базы данных и удаление устаревших записей зависит от быстродействия компьютера и количества устаревших записей. Иногда эта операция может занимать до 10 минут. При этом опрос адамов сильно замедляется.</P>
+<P style="text-indent:14.20pt;">&nbsp;</P>
+<P style="text-indent:14.20pt;">Данная база данных имеет три индекса используемые для разных случаев сортировки базы данных.</P>
+<P style="text-indent:14.20pt;">Основной индекс включает все поля базы данных.</P>
+<P style="text-indent:14.20pt;">Первый дополнительный индекс </P>
+<P style="text-indent:14.20pt;">&nbsp;</P>
+<TABLE width="160" cellspacing="0" cellpadding="1" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+ <TR valign=top>
+ <TD width="94" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+ <P>Название</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+ <TD width="66" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+ <P>Поля</P>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD></TR>
+ <TR valign=top>
+ <TD width="94" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+ <P>ByParam</P></TD>
+ <TD width="66" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+ <P>Numb</P></TD></TR>
+</TABLE>
+<P style="text-indent:14.20pt;">&nbsp;</P>
+<P style="text-indent:14.20pt;">Второй дополнительный индекс.</P>
+<P style="text-indent:14.20pt;">&nbsp;</P>
+<TABLE width="170" cellspacing="0" cellpadding="1" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+ <TR valign=top>
+ <TD width="94" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+ <P style="text-indent:14.20pt;">Название</P>
+ <P style="text-indent:14.20pt;">&nbsp;</P></TD>
+ <TD width="75" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+ <P style="text-indent:14.20pt;">Поля</P></TD></TR>
+ <TR valign=top>
+ <TD width="94" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+ <P>ByTime</P></TD>
+ <TD width="75" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+ <P>Date  Hours  Minuts  Seconds</P></TD></TR>
+</TABLE>
+<P style="text-indent:14.20pt;">&nbsp;</P>
+<P style="text-indent:14.20pt;">В случае некорректного отключения компьютера может произойти порча индексов. В этом случае индексы могут быть восстановлены с помощью утилиты <span style="text-decoration:underline;"><font  color='green'>Database Desktop </font></span>по указанным выше сведениям.</P>
+<P style="text-indent:14.20pt;">&nbsp;</P>
+<P style="text-indent:14.20pt;">Смотрите также <font  color='green'>Аварийная база данных</font>, <font  color='green'>Резервная база данных</font>.</P>
+</BODY>
+</HTML>

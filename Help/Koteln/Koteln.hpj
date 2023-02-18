@@ -1,0 +1,106 @@
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+; Help Project File for New Help Projects 
+;
+;  This file is maintained by RoboHELP.  Do not modify this file directly.
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+[OPTIONS]
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+; The Options section contains the following information:
+;
+; The optional BMROOT= entry sets the directories in which the Help Compiler
+; will look for graphics.
+;
+; The CONTENTS= tells WinHelp which topic contains the contents.
+;
+; The TITLE= is displayed in the Title Bar of WINHELP.EXE
+;
+; The BUILD= setting allows you to create different Help systems from
+; the same source file.
+;
+; The COMPRESS= option tells the Help Compiler how much to compress
+; the Help file.
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+TITLE=Справка для котельной
+BUILD=WINDOWS
+COMPRESS=12
+REPORT=YES
+NOTES=YES
+
+
+OLDKEYPHRASE=NO
+[BUILDTAGS]
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+; The Build Tags section specifies to the Help Compiler the names
+; of all the valid build tags used in this Help project.
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+WINDOWS
+
+
+[WINDOWS]
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+; The Windows section contains all of the information about the windows
+; in a Help project.
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+;Gloss = "Glossary",(100,100,350,350),0,(255,255,255),(255,255,255)
+Main=,,29188,,(128,255,255),
+Second=,(583,102,409,870),20736,(255,255,224),(255,255,224),f2
+
+
+[ALIAS]
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+; The Alias section sets up aliases for Topic IDs in your Help system.
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+[BITMAPS]
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+; The Bitmaps section specifies the referenced bitmaps used in
+; your help system.
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
+[BAGGAGE]
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+; The Baggage section specifies any additional files.
+;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+eHelp.xml
+pc.bmp
+c1.bmp
+p0.bmp
+[FILES]
+Koteln.rtf
+HtmlWh.rtf
+[CONFIG]
+RegisterRoutine(`Inetwh32.dll',`INETWH_Initialize',`')
+RegisterRoutine(`Inetwh32.dll',`Internet',`S')
+RegisterRoutine(`Inetwh32.dll',`Inet',`S')
+INETWH_Initialize()
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExInitialize',`')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExAbout',`')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermark',`SSS')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermarkNonScroll',`SSS')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowNavPane',`S')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowSeeAlso',`S')
+RegisterRoutine(`RoboEx32.dll',`JumpHtml',`s')
+RoboHelpExInitialize()
+ChangeButtonBinding(`btn_topics',"RoboHelpExShowNavPane(`toggle')")
+RoboHelpExShowNavPane(`show')
+RoboHelpExShowSeeAlso(`See &Also')
+RoboHelpExWatermark(`p0.bmp',`tile',`No')
+[CONFIG-Second]
+RegisterRoutine(`Inetwh32.dll',`INETWH_Initialize',`')
+RegisterRoutine(`Inetwh32.dll',`Internet',`S')
+RegisterRoutine(`Inetwh32.dll',`Inet',`S')
+INETWH_Initialize()
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExInitialize',`')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExAbout',`')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermark',`SSS')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermarkNonScroll',`SSS')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowNavPane',`S')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowSeeAlso',`S')
+RegisterRoutine(`RoboEx32.dll',`JumpHtml',`s')
+RoboHelpExInitialize()
+ChangeButtonBinding(`btn_topics',"RoboHelpExShowNavPane(`toggle')")

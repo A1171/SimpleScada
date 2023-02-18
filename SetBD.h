@@ -1,0 +1,147 @@
+//---------------------------------------------------------------------------
+#ifndef SetBDH
+#define SetBDH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <DBGrids.hpp>
+#include <Grids.hpp>
+#include <Buttons.hpp>
+#include <ExtCtrls.hpp>
+#include <DBCtrls.hpp>
+#include <Mask.hpp>
+#include <ComCtrls.hpp>
+//---------------------------------------------------------------------------
+class TSetParamForm : public TForm
+{
+__published:	// IDE-managed Components
+        TPanel *Panel2;
+        TButton *DefaultBut;
+        TBitBtn *BitBtn2;
+        TBitBtn *BitBtn1;
+        TPageControl *PageControl1;
+        TTabSheet *InpSignalSheet;
+        TTabSheet *CalcSignalSheet;
+        TGroupBox *GroupBox4;
+        TLabel *Label1;
+        TLabel *Label2;
+        TLabel *Label3;
+        TLabel *Label16;
+        TDBEdit *DBEdit1;
+        TDBEdit *DBEdit2;
+        TDBEdit *DBEdit3;
+        TDBEdit *DBEdit16;
+        TGroupBox *GroupBox3;
+        TLabel *Label4;
+        TLabel *Label15;
+        TDBEdit *DBEdit4;
+        TDBEdit *DBEdit15;
+        TDBCheckBox *DBCheckBox2;
+        TGroupBox *GroupBox2;
+        TLabel *Label5;
+        TLabel *Label6;
+        TLabel *Label7;
+        TLabel *Label8;
+        TLabel *Label13;
+        TLabel *Label14;
+        TLabel *Label18;
+        TDBEdit *DBEdit5;
+        TDBEdit *DBEdit6;
+        TDBEdit *DBEdit7;
+        TDBEdit *DBEdit8;
+        TDBEdit *DBEdit13;
+        TDBEdit *DBEdit14;
+        TDBCheckBox *DBCheckBox1;
+        TDBEdit *DBEdit18;
+        TGroupBox *GroupBox1;
+        TLabel *Label9;
+        TLabel *Label11;
+        TLabel *Label12;
+        TLabel *Label10;
+        TDBEdit *DBEdit9;
+        TDBEdit *DBEdit11;
+        TDBEdit *DBEdit12;
+        TDBEdit *DBEdit10;
+        TPanel *Panel1;
+        TSpeedButton *AddSButton;
+        TDBNavigator *DBNavigator1;
+        TGroupBox *GroupBox5;
+        TLabel *Label17;
+        TDBEdit *DBEdit17;
+        TGroupBox *GroupBox6;
+        TLabel *Label22;
+        TLabel *Label23;
+        TDBEdit *DBEdit22;
+        TDBEdit *DBEdit23;
+        TGroupBox *GroupBox7;
+        TLabel *Label24;
+        TLabel *Label25;
+        TLabel *Label26;
+        TLabel *Label27;
+        TLabel *Label28;
+        TLabel *Label29;
+        TLabel *Label30;
+        TDBEdit *DBEdit24;
+        TDBEdit *DBEdit25;
+        TDBEdit *DBEdit26;
+        TDBEdit *DBEdit27;
+        TDBEdit *DBEdit28;
+        TDBEdit *DBEdit29;
+        TDBCheckBox *SmoothDBCheckBox1;
+        TDBEdit *DBEdit30;
+        TGroupBox *GroupBox8;
+        TLabel *Label31;
+        TLabel *Label32;
+        TLabel *Label33;
+        TLabel *Label34;
+        TDBEdit *DBEdit31;
+        TDBEdit *DBEdit32;
+        TDBEdit *DBEdit33;
+        TDBEdit *DBEdit34;
+        TPanel *Panel3;
+        TSpeedButton *SpeedButton1;
+        TDBNavigator *DBNavigator2;
+        TGroupBox *GroupBox9;
+        TLabel *Label36;
+        TLabel *Label20;
+        TDBEdit *DBEdit19;
+        TGroupBox *GroupBox10;
+        TLabel *Label19;
+        TLabel *Label21;
+        TDBEdit *DBEdit20;
+        TGroupBox *GroupBox11;
+        TLabel *Label35;
+        TLabel *Label37;
+        TDBEdit *DBEdit21;
+        TLabel *Label38;
+        TDBLookupComboBox *DBLookupComboBox1;
+        TDBLookupComboBox *DBLookupComboBox2;
+        TLabel *Label40;
+        TDBLookupComboBox *DBLookupComboBox3;
+        TDBLookupComboBox *DBLookupComboBox4;
+        TDBLookupComboBox *DBLookupComboBox5;
+        TDBCheckBox *DBCheckBox3;
+        TLabel *Label39;
+        TDBEdit *DBEdit35;
+        TLabel *Label41;
+        TDBEdit *DBEdit36;
+        void __fastcall BitBtn1Click(TObject *Sender);
+        void __fastcall DBNavigator1Click(TObject *Sender,
+          TNavigateBtn Button);
+        void __fastcall AddSButtonClick(TObject *Sender);
+        void __fastcall DefaultButClick(TObject *Sender);
+        void __fastcall BitBtn2Click(TObject *Sender);
+        void __fastcall FormActivate(TObject *Sender);
+        void __fastcall DBCheckBox1Click(TObject *Sender);
+        void __fastcall SpeedButton1Click(TObject *Sender);
+        void __fastcall SmoothDBCheckBox1Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+        __fastcall TSetParamForm(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TSetParamForm *SetParamForm;
+//---------------------------------------------------------------------------
+#endif

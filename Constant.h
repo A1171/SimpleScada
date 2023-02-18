@@ -1,0 +1,37 @@
+//---------------------------------------------------------------------------
+#ifndef ConstantH
+#define ConstantH
+//#define maxport 10
+#define maxform 20
+#define maxport 8
+#define maxadam 4
+#define maxchannel 8
+#define maxgroup 50
+#define speed 500
+#define maxconnfail 2//Attempt count before set FailChannel  flag
+//#define Debug
+#define NDEBUG
+#define maxinpsignal 1000
+#define maxcalcsignal 1000
+#define maxoutsignal 1000
+#define maxsignal 3000//maxinpsignal+maxcalcsignal+maxoutsignal
+#define maxsavedsignal 1000//maxsignal//max number of signal that can be saved in database
+#define defPointerToSignals DataModule1->Signal
+#define defExtDev DataModule1->ExternalDevices
+#define defSingleDevice DataModule1->SingleDevice
+#define defGetIntProc DataModule1->GetIntProc
+#define numbofsignal 3
+#define SoundBuffer 10
+#define ChCount 20
+#define maxgraph 8
+#define maxgraphgroup 15
+#define datastoredays 60//how many days store data in main database
+#define reservestoredays 2//now many days store data in reserve database
+//#define Bugswitchedon
+#define maxworkday 37370
+#define printnumfontsize 6
+//typedef (float)(TIntProc*)();
+//#define maxoutsignals 10
+//#define UNICODE
+//---------------------------------------------------------------------------
+#endif
